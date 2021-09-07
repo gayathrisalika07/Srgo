@@ -19,6 +19,10 @@ public class Homepage
        @FindBy(xpath="//a[text()='New Forecast']") private WebElement newforecasttab;
        @FindBy(xpath="//a[@id=\"showSubMenu\"]")private WebElement newdd;
        @FindBy(xpath="//a[text()='New Invoice']") private WebElement invoicedd;
+       @FindBy(xpath="//a[text()=\"Reports\"]") private WebElement reportstab;
+       @FindBy(xpath="//img[@id=\"scrollright\"]") private WebElement scrolltab;
+       @FindBy(xpath="//a[text()=\"Purchase Orders\"]") private WebElement purchasetab;
+       @FindBy(xpath="//a[text()='Cases']") private WebElement casetab;
        public Homepage()
        {
     	   PageFactory.initElements(Basetest.driver, this);
@@ -68,6 +72,23 @@ public class Homepage
     	   WebDriverComLib wlib= new WebDriverComLib();
     	   wlib.mousehover(newdd);
     	   invoicedd.click();
+       }
+       public void clickreportstb()
+       {
+    	   reportstab.click();
+       }
+       public void scrollright()
+       {
+    	   WebDriverComLib wlib= new WebDriverComLib();
+    	   wlib.scrolldown(scrolltab);
+       }
+       public void purchaseclick()
+       {
+    	   purchasetab.click();
+       }
+       public void casestab()
+       {
+    	   casetab.click();
        }
        
 

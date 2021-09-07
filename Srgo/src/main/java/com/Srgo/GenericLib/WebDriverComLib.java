@@ -2,6 +2,7 @@ package com.Srgo.GenericLib;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Set;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -110,6 +111,21 @@ public class WebDriverComLib
 	 {
 		 Actions ac= new Actions(Basetest.driver);
 		 ac.moveToElement(element).perform();
+	 }
+	 public void getwindowhandle(String targetwindowtitle,WebElement element)
+	 {
+		 String mainWindow = Basetest.driver.getWindowHandle();
+		 Set<String> allwhs=Basetest.driver.getWindowHandles();
+		 for(String wh:allwhs)
+		 {
+			 String title=Basetest.driver.switchTo().window(wh).getTitle();
+			 if(title.equals(targetwindowtitle))
+			 {
+				element.click(); 
+			 }
+		 }
+		// Basetest.driver.switchTo().window(mainwindow);
+		 
 	 }
 	  
 	  
