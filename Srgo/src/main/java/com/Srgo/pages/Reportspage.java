@@ -2,20 +2,31 @@ package com.Srgo.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class Reportspage
+import com.Srgo.GenericLib.Basetest;
+import com.Srgo.GenericLib.WebDriverComLib;
+
+public class Reportspage 
 {
-     @FindBy(xpath="//input[@name=\"newReport\"]") private WebElement createnewreport;
+     
      @FindBy(xpath="//select[@id=\"primarymodule\"]") private WebElement selectNewreportdd;
-     @FindBy(xpath="(//option[text()='SalesOrders'])[5]") private WebElement modulesdd;
+   //  @FindBy(xpath="//select[@id=\"Productsrelatedmodule\"]") private WebElement prmodule;
+     //@FindBy(xpath="(//select[text()='Invoices'])[4]") private WebElement modulesdd;
      @FindBy(xpath="//input[@name=\"nextBtn\"]") private WebElement continuebt;
-     @FindBy(xpath="//td[text()='Tabular reports provide you the way to list your data in a simpler form.']") private WebElement tabularbt;
-     @FindBy(xpath="//input[@name=\"btnSaveAndRun\"]") private WebElement savebt;
-	 @FindBy(xpath="//a[text()='Columns']") private WebElement columntab;
-	 @FindBy(xpath="//select[@id=\"availList\"]") private WebElement avilablecolumn;
-	 @FindBy(xpath="//input[@value=\"Add\"]") private WebElement addbt;
-	 @FindBy(xpath="(//input[@value=\"Save\"])[2]") private WebElement savebt2;
-	  
+     
+     public Reportspage()
+     {
+    	 PageFactory.initElements(Basetest.driver, this);
+     }
+     public void createreport()
+     {
+    	 WebDriverComLib wlib =new WebDriverComLib();
+    	 wlib.selectOption("Products", selectNewreportdd);
+    	 //wlib.scrolldown(prmodule);
+    	// wlib.selectOption("Invoice", modulesdd);
+    	 continuebt.click();
+     }
 	
 	
 }

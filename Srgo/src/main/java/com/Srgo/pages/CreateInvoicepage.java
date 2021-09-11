@@ -18,7 +18,7 @@ public class CreateInvoicepage
     {
     	PageFactory.initElements(Basetest.driver, this);
     }
-    public void FillMandatorydetails(String subject,String accountname,String product, int i, int j)
+    public void FillMandatorydetails(String subject,String accountname,String product, String i, String j)
     {
     	subjecttb.sendKeys(subject);
     	accountnametb.sendKeys(accountname);

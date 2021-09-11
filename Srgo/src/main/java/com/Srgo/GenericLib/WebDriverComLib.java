@@ -77,7 +77,7 @@ public class WebDriverComLib
 	  {
 		  Basetest.driver.switchTo().frame(index);
 	  }
-	  public void switchToFrame(String value)
+                                                                                                                                                                                                                                                                                                                                                                         	  public void switchToFrame(String value)
 	  {
 		  Basetest.driver.switchTo().frame(value);
 	  }

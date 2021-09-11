@@ -23,6 +23,8 @@ public class Homepage
        @FindBy(xpath="//img[@id=\"scrollright\"]") private WebElement scrolltab;
        @FindBy(xpath="//a[text()=\"Purchase Orders\"]") private WebElement purchasetab;
        @FindBy(xpath="//a[text()='Cases']") private WebElement casetab;
+       @FindBy(xpath="//a[text()='Activities']") private WebElement activitiestab;
+       @FindBy(xpath="//a[text()='Campaigns']") private WebElement campaignstab;
        public Homepage()
        {
     	   PageFactory.initElements(Basetest.driver, this);
@@ -89,6 +91,10 @@ public class Homepage
        public void casestab()
        {
     	   casetab.click();
+       }
+       public void campaignstab()
+       {
+    	   campaignstab.click();
        }
        
 

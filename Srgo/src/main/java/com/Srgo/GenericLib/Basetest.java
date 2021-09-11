@@ -36,7 +36,7 @@ public class Basetest implements IAutoconstants
 		String expectedLoginTitle=flib.readPropertyData(PROP_PATH,"HomeTitle");
 		wlib.verify(wlib.getPageTitle(), expectedLoginTitle,"homepage");
 	  }
-	@AfterClass
+	//@AfterClass
 	public void closeBrowser()
 	{
 		driver.quit();

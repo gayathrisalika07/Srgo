@@ -28,7 +28,7 @@ public class Newforecast  extends Basetest {
 		Thread.sleep(3000);
 	     wlib.verify(PROP_PATH, flib.readPropertyData(PROP_PATH, "Createforecast"), "forecastpage");
 		Createforecastepage cfp= new Createforecastepage();
-		cfp.Fillrequiredfileds(6, 2);
+		cfp.Fillrequiredfileds(5, 1);
 		//wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "ForecastTitle"), "forecastpage");
 		   Forecastepage fcp= new Forecastepage();
 		   fcp.FillDetails();

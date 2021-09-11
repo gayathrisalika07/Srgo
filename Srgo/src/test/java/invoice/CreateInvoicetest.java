@@ -25,7 +25,8 @@ public class CreateInvoicetest extends Basetest
     	  hp.newdd();
     	  wlib.verify(wlib.getPageTitle(), flib.readPropertyData(PROP_PATH, "InvoiceTitle"),"invoice page");
                  CreateInvoicepage ci=new CreateInvoicepage();
-                 ci.FillMandatorydetails(flib.readExcelData(EXCEL_PATH, "Sheet1", 1, 0), flib.readExcelData(EXCEL_PATH, "Sheet1", 1, 1), flib.readExcelData(EXCEL_PATH, "Sheet1", 1, 2), 3, 30000);
+                 Thread.sleep(3000);
+                 ci.FillMandatorydetails(flib.readExcelData(EXCEL_PATH, "Sheet1", 1, 0), flib.readExcelData(EXCEL_PATH, "Sheet1", 1, 1), flib.readExcelData(EXCEL_PATH, "Sheet1", 1, 2), "3", "30000");
     	  
     	  
     	  

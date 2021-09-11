@@ -15,7 +15,9 @@ public class Displayingcustomviewdetailspage
 	@FindBy(xpath="//input[@value=\"Add\"]") private WebElement addbt;
 	@FindBy(xpath="//input[@value=\"Save\"]") private WebElement savebt;
 	@FindBy(xpath="(//input[@value=\"4501\"])[2]") private WebElement editcheckbox;
-	@FindBy(xpath="value=\"Create Task\"") private WebElement createtaskbt;
+	@FindBy(xpath="(//input[@name=\"\"])[1]") private WebElement createtaskbt;
+	@FindBy(xpath="//input[@name=\"chk\"]") private WebElement Checkboxbt;
+	@FindBy(xpath="//input[@value=\"New Campaign\"]") private WebElement newcampaignbt;
 	
 	
 	public Displayingcustomviewdetailspage()
@@ -30,6 +32,16 @@ public class Displayingcustomviewdetailspage
 		wlib.selectOption(avilablecolumnsdd, i);
 		addbt.click();
 		savebt.click();
+	}
+	public void Createnewtask()
+	{
+		Checkboxbt.click();
+		createtaskbt.click();
+		
+	}
+	public void newcampaign()
+	{
+		newcampaignbt.click();
 	}
 	
 
